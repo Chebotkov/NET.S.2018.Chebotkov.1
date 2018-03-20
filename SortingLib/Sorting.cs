@@ -44,7 +44,7 @@
         /// This method sorts array by "Quick Sort".  
         /// </summary>
         /// <param name="a">Array</param>
-        /// <exception cref="System.IndexOutOfRangeException"></exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">Throws when was received wrong range of indices</exception>
         public static void QuickSort(int[] a)
         {
             QuickSort(a, 0, a.Length);
@@ -57,7 +57,7 @@
         /// <param name="a">Array</param>
         /// <param name="left">First index of array</param>
         /// <param name="right">Last index of array</param>
-        /// <exception cref="System.IndexOutOfRangeException"></exception>
+        /// <exception cref="System.ArgumentOutOfRangeException">"Throws when was received wrong range of indices"</exception>
         public static void QuickSort(int[] a, int left, int right)
         {
             if (left < right)
@@ -100,7 +100,7 @@
             }
             else
             {
-                throw new System.IndexOutOfRangeException();
+                throw new System.ArgumentOutOfRangeException("Wrong range of indices");
             }
         }
         #endregion 
@@ -112,7 +112,6 @@
         /// <param name="arr">Array</param>
         /// <param name="top">First index of array</param>
         /// <param name="end">Last index of array</param>
-        /// <exception cref="System.IndexOutOfRangeException"></exception>
         private static void Merge(int[] arr, int top, int end)
         {
             int[] result = new int[arr.Length];
